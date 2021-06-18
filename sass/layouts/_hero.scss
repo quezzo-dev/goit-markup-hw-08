@@ -16,6 +16,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: $mobile) {
+  }
+
+  @media screen and (min-width: $desctop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__title {
@@ -28,6 +36,11 @@
   width: 360px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 44px;
+    width: 696px;
+  }
 }
 
 .backdrop {
@@ -41,7 +54,9 @@
   z-index: 999;
   opacity: 1;
   transition: opacity 250ms $cubic-bezier;
-  overflow-y: scroll;
+  @media screen and (max-width: 1199px) {
+    overflow-y: scroll;
+  }
 
   &.backdrop--hidden {
     opacity: 0;
@@ -67,9 +82,14 @@
   border-radius: 4px;
   transition: transform 250ms $cubic-bezier;
 
-  @media screen and (min-width: 480px) {
-    max-width: 450px;
-    width: 100%;
+  // @media screen and (min-width: 200px) {
+  //   max-width: 450px;
+  //   width: 100%;
+  // }
+
+  @media screen and (min-width: $desctop) {
+    min-width: 528px;
+    min-height: 581px;
   }
 
   &--button {
@@ -113,6 +133,10 @@
   width: 370px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $desctop) {
+    width: 448px;
+  }
 }
 
 .modal__group {
@@ -164,6 +188,10 @@
     outline: none;
     color: rgba(117, 117, 117, 0.5);
   }
+
+  @media screen and (min-width: $desctop) {
+    max-width: 448px;
+  }
 }
 
 .modal__input {
@@ -178,6 +206,10 @@
   &:hover,
   &:focus {
     border: 1px solid $blue-color;
+  }
+
+  @media screen and (min-width: $desctop) {
+    max-width: 448px;
   }
 }
 
@@ -199,6 +231,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 14px;
+  }
 }
 
 .checkbox__link {
@@ -229,220 +265,3 @@
   border-radius: 2px;
   margin-right: 8px;
 }
-
-// .hero {
-//   text-align: center;
-//   background-image: linear-gradient(
-//       to right,
-//       rgba(47, 48, 58, 0.4),
-//       rgba(47, 48, 58, 0.4)
-//     ),
-//     url("../images/bg.jpg");
-//   background-color: #c4c4c4;
-//   max-width: 1600px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   height: 600px;
-//   padding-top: 200px;
-//   padding-bottom: 200px;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-// }
-
-// .hero__title {
-//   font-weight: $fw-black;
-//   font-size: 44px;
-//   line-height: 1.36;
-//   text-transform: uppercase;
-//   color: $white-color;
-//   margin-bottom: 30px;
-//   width: 696px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// .backdrop {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.2);
-//   z-index: 999;
-//   opacity: 1;
-//   transition: opacity 250ms $cubic-bezier;
-
-//   &.backdrop--hidden {
-//     opacity: 0;
-//     pointer-events: none;
-//   }
-
-//   &.backdrop--hidden .modal {
-//     transform: translate(-50%, -50%) scale(0.5);
-//   }
-// }
-
-// .modal {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%) scale(1);
-//   min-width: 528px;
-//   min-height: 581px;
-//   background: $white-color;
-//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-//     0px 2px 1px rgba(0, 0, 0, 0.2);
-//   border-radius: 4px;
-//   transition: transform 250ms $cubic-bezier;
-
-//   &--button {
-//     font-weight: $fw-bold;
-//     font-size: 16px;
-//     line-height: 30px;
-//     letter-spacing: 0.06em;
-//     margin-top: 30px;
-//   }
-// }
-
-// .modal__cross {
-//   position: absolute;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 30px;
-//   height: 30px;
-//   border-radius: 50%;
-//   border: 1px solid rgba(0, 0, 0, 0.1);
-//   top: 0;
-//   right: 0;
-//   margin-top: 8px;
-//   margin-right: 8px;
-// }
-
-// .modal__title {
-//   font-weight: $fw-bold;
-//   font-size: 20px;
-//   line-height: 23px;
-//   text-align: center;
-//   letter-spacing: 0.03em;
-//   margin-top: 40px;
-//   margin-bottom: 12px;
-// }
-
-// .modal__form {
-//   width: 448px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// .modal__group {
-//   display: flex;
-//   flex-direction: column;
-//   position: relative;
-
-//   &:not(:last-child) {
-//     margin-bottom: 10px;
-//   }
-
-//   &:hover .modal__icon,
-//   &:focus .modal__icon {
-//     fill: $blue-color;
-//   }
-// }
-
-// .modal__label {
-//   color: $grey-color;
-//   text-align: left;
-//   font-weight: $fw-regular;
-//   font-size: 12px;
-//   line-height: 14px;
-//   letter-spacing: 0.01em;
-//   margin-bottom: 4px;
-// }
-
-// .modal__textarea {
-//   height: 120px;
-//   padding-top: 12px;
-//   padding-left: 12px;
-//   border: 1px solid rgba(33, 33, 33, 0.2);
-//   border-radius: 4px;
-//   transition: border 250ms $cubic-bezier;
-//   margin-bottom: 20px;
-
-//   &:hover,
-//   &:focus {
-//     border: 1px solid $blue-color;
-//   }
-
-//   &::placeholder {
-//     font-weight: $fw-regular;
-//     font-size: 12px;
-//     line-height: 14px;
-//     letter-spacing: 0.01em;
-//     outline: none;
-//     color: rgba(117, 117, 117, 0.5);
-//   }
-// }
-
-// .modal__input {
-//   border: 1px solid rgba(33, 33, 33, 0.2);
-//   border-radius: 4px;
-//   height: 40px;
-//   padding-left: 42px;
-//   transition: border 250ms $cubic-bezier;
-
-//   &:hover,
-//   &:focus {
-//     border: 1px solid $blue-color;
-//   }
-// }
-
-// .modal__icon {
-//   position: absolute;
-//   height: 18px;
-//   width: 18px;
-//   left: 12px;
-//   top: 50%;
-//   transition: fill 250ms $cubic-bezier;
-// }
-
-// .checkbox {
-//   font-weight: $fw-regular;
-//   font-size: 14px;
-//   line-height: 24px;
-//   letter-spacing: 0.03em;
-//   color: $grey-color;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .checkbox__link {
-//   color: $blue-color;
-//   text-decoration: underline;
-// }
-
-// .checkbox__policy {
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-//   position: absolute;
-
-//   &:checked + .checkbox__icon {
-//     background-image: url("../../images/check.svg");
-//     background-size: contain;
-//     background-color: $blue-color;
-//     border-color: $blue-color;
-//     background-origin: border-box;
-//   }
-// }
-
-// .checkbox__icon {
-//   display: flex;
-//   width: 16px;
-//   height: 15px;
-//   border: 2px solid $black-color;
-//   border-radius: 2px;
-//   margin-right: 8.38px;
-// }

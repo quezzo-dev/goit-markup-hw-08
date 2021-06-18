@@ -1,12 +1,19 @@
+.page-header__container {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
 .page-header {
   border-bottom: 1px solid #ececec;
   padding-top: 16px;
   padding-bottom: 16px;
-  position: relative;
 
   @media screen and (min-width: $tablet) {
     padding-top: 21px;
-    padding-bottom: 19px;
+    padding-bottom: 21px;
   }
 
   @media screen and (min-width: $desctop) {
@@ -19,24 +26,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: 767px) {
-    justify-content: space-between;
-  }
 }
 
 .logo {
   font-family: $font-secondary;
   font-weight: $fw-bold;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.17;
+
+  @media screen and (min-width: $desctop) {
+    font-size: 26px;
+  }
 }
 
 .logo--accent {
   color: $blue-color;
 }
 
-.burger-menu {
+.burger-menu__btn {
   background-color: transparent;
   border: none;
   display: inline-flex;
@@ -53,25 +60,13 @@
   }
 }
 
-.burger-menu__cross {
-  display: none;
-}
-
-.burger-menu--is-open .burger-menu__cross {
-  display: block;
-}
-
-.burger-menu--is-open .burger-menu__burger {
-  display: none;
-}
-
 .menu-container {
   background-color: $white-color;
 
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
   }
@@ -83,16 +78,10 @@
   &--is-open {
     display: block;
   }
-
-  // @media screen and (min-width: $desctop) {
-  //   justify-content: center;
-  //   align-items: center;
-  // }
 }
 
 .site-nav {
   font-weight: $fw-medium;
-  font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
 
@@ -186,6 +175,7 @@
 
     &__item:not(:last-child) {
       margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }

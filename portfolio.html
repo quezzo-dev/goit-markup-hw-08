@@ -14,35 +14,13 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="container test">
+      <div class="container page-header__container">
         <nav class="navigation">
           <a href="./index.html" class="logo page-header__logo"
             ><span class="logo--accent">Web</span>Studio</a
           >
-          <button
-            type="button"
-            class="burger-menu"
-            data-menu-button
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg
-              width="24px"
-              height="16px"
-              aria-label="Переключатель мобильного меню"
-            >
-              <use
-                class="burger-menu__burger"
-                href="./images/icons.svg#burger"
-              ></use>
-              <use
-                class="burger-menu__cross"
-                href="./images/icons.svg#menu-cross"
-              ></use>
-            </svg>
-          </button>
 
-          <div class="mobile-menu" id="mobile-menu" data-menu>
+          <div class="menu-container">
             <ul class="site-nav">
               <li class="site-nav__item">
                 <a href="./index.html" class="site-nav__link">Студия</a>
@@ -79,6 +57,65 @@
             </ul>
           </div>
         </nav>
+
+        <button type="button" class="burger-menu__btn" data-menu-button>
+          <svg
+            width="24px"
+            height="16px"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__cross" data-menu-close>
+            <svg width="24px" height="16px">
+              <use href="./images/icons.svg#menu-cross"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">Контакты</a>
+            </li>
+          </ul>
+
+          <ul class="mobile-contacts__nav">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__link">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mobile-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mobile-contacts__link">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mobile-social__nav">
+            <li class="mobile-social__item">
+              <a href="#" class="mobile-social__link">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="#" class="mobile-social__link">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="#" class="mobile-social__link">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a href="#" class="mobile-social__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -112,7 +149,27 @@
           <ul class="projects-list">
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img src="./images/img8.jpg" width="370" alt="Ноутбук" />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img8.jpg 1x, ./images/img8@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet8.jpg    1x,
+                      ./images/img-tablet8@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile8.jpg    1x,
+                      ./images/img-mobile8@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/img-mobile8.jpg" alt="Ноутбук" />
+                </picture>
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -129,11 +186,31 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img
-                  src="./images/img9.jpg"
-                  width="370"
-                  alt="Два игрока в баскетбол"
-                />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img9.jpg 1x, ./images/img9@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet9.jpg    1x,
+                      ./images/img-tablet9@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile9.jpg    1x,
+                      ./images/img-mobile9@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="./images/img-mobile9.jpg"
+                    alt="Два игрока в баскетбол"
+                  />
+                </picture>
+
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -152,11 +229,31 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img
-                  src="./images/img10.jpg"
-                  width="370"
-                  alt="Логотип ресторана"
-                />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img10.jpg 1x, ./images/img10@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet10.jpg    1x,
+                      ./images/img-tablet10@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile10.jpg    1x,
+                      ./images/img-mobile10@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="./images/img-mobile10.jpg"
+                    alt="Логотип ресторана"
+                  />
+                </picture>
+
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -173,7 +270,28 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img src="./images/img11.jpg" width="370" alt="Наушники" />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img11.jpg 1x, ./images/img11@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet11.jpg    1x,
+                      ./images/img-tablet11@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile11.jpg    1x,
+                      ./images/img-mobile11@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/img-mobile11.jpg" alt="Наушники" />
+                </picture>
+
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -190,11 +308,31 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img
-                  src="./images/img12.jpg"
-                  width="370"
-                  alt="Белая и коричневая коробки"
-                />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img12.jpg 1x, ./images/img12@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet12.jpg    1x,
+                      ./images/img-tablet12@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile12.jpg    1x,
+                      ./images/img-mobile12@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="./images/img-mobile12.jpg"
+                    alt="Белая и коричневая коробки"
+                  />
+                </picture>
+
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -211,7 +349,27 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img src="./images/img13.jpg" width="370" alt="Монитор" />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img13.jpg 1x, ./images/img13@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet13.jpg    1x,
+                      ./images/img-tablet13@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile13.jpg    1x,
+                      ./images/img-mobile13@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/img-mobile13.jpg" alt="Монитор" />
+                </picture>
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -228,11 +386,27 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img
-                  src="./images/img14.jpg"
-                  width="370"
-                  alt="Открытый буклет"
-                />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img14.jpg 1x, ./images/img14@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet14.jpg    1x,
+                      ./images/img-tablet14@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile14.jpg    1x,
+                      ./images/img-mobile14@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/img-mobile14.jpg" alt="Открытый буклет" />
+                </picture>
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -242,14 +416,34 @@
                 </div>
               </div>
               <div class="projects-list__info">
-                <h2 class="projects-list__title">Издание Limited Edition<</h2>
+                <h2 class="projects-list__title">Издание Limited Edition</h2>
                 <p class="projects-list__description">Дизайн</p>
               </div>
             </li>
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img src="./images/img15.jpg" width="370" alt="Бирка" />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img15.jpg 1x, ./images/img15@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet15.jpg    1x,
+                      ./images/img-tablet15@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile15.jpg    1x,
+                      ./images/img-mobile15@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img src="./images/img-mobile15.jpg" alt="Бирка" />
+                </picture>
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -266,11 +460,31 @@
 
             <li class="projects-list__item">
               <div class="projects-list__thumb">
-                <img
-                  src="./images/img16.jpg"
-                  width="370"
-                  alt="Человек работает за ноутбуком"
-                />
+                <picture class="our-work__picture">
+                  <source
+                    srcset="./images/img16.jpg 1x, ./images/img16@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-tablet16.jpg    1x,
+                      ./images/img-tablet16@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/img-mobile16.jpg    1x,
+                      ./images/img-mobile16@2x.jpg 2x
+                    "
+                    media="(min-width: 480px)"
+                  />
+                  <img
+                    src="./images/img-mobile16.jpg"
+                    alt="Человек работает за ноутбуком"
+                  />
+                </picture>
+
                 <div class="projects-list__overlay">
                   <p class="projects-list__text">
                     Технокряк это современная площадка распространения
@@ -291,64 +505,65 @@
 
     <footer class="footer">
       <div class="container footer--container">
-        <div class="footer__left-side">
-          <a href="./index.html" class="footer__logo"
-            ><span class="logo--accent">Web</span>Studio</a
-          >
+        <div class="tablet-container">
+          <div class="footer__left-side">
+            <a href="./index.html" class="footer__logo"
+              ><span class="logo--accent">Web</span>Studio</a
+            >
 
-          <address class="address">
-            <p class="address__office">г. Киев, пр-т Леси Украинки, 26</p>
-            <ul class="address__list">
-              <li class="address__item">
-                <a class="address__link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+            <address class="address">
+              <p class="address__office">г. Киев, пр-т Леси Украинки, 26</p>
+              <ul class="address__list">
+                <li class="address__item">
+                  <a class="address__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+
+                <li class="address__item">
+                  <a class="address__link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="social-footer">
+            <h2 class="social-footer__title">Присоединяйтесь</h2>
+            <ul class="social-footer__list">
+              <li class="social-footer__item">
+                <a href="" class="social-footer__icon">
+                  <svg class="social-footer__svg">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
 
-              <li class="address__item">
-                <a class="address__link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="social-footer__item">
+                <a href="" class="social-footer__icon">
+                  <svg class="social-footer__svg">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-footer__item">
+                <a href="" class="social-footer__icon">
+                  <svg class="social-footer__svg">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-footer__item">
+                <a href="" class="social-footer__icon">
+                  <svg class="social-footer__svg">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-
-        <div class="social-footer">
-          <h2 class="social-footer__title">Присоединяйтесь</h2>
-          <ul class="social-footer__list">
-            <li class="social-footer__item">
-              <a href="" class="social-footer__icon">
-                <svg class="social-footer__svg">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-footer__item">
-              <a href="" class="social-footer__icon">
-                <svg class="social-footer__svg">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-footer__item">
-              <a href="" class="social-footer__icon">
-                <svg class="social-footer__svg">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-footer__item">
-              <a href="" class="social-footer__icon">
-                <svg class="social-footer__svg">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
 
         <div class="form-footer">
