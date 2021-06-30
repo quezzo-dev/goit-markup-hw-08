@@ -16,6 +16,7 @@
       position: relative;
       padding-top: 48px;
       padding-bottom: 48px;
+      padding-left: 40px;
     }
 
     &__cross {
@@ -85,8 +86,8 @@
 
 .mobile-social__nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .mobile-social__item {
